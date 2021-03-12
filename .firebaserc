@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "munetos": {
+      "hosting": {
+        "app": [
+          "munetos"
+        ]
+      }
+    }
+  }
+}

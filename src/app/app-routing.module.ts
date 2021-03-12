@@ -17,10 +17,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/articles/articles.module').then( m => m.ArticlesPageModule)
   },
   {
-    path: 'news',
-    loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
-  },
-  {
     path: 'contacts',
     loadChildren: () => import('./pages/contacts/contacts.module').then( m => m.ContactsPageModule)
   },
@@ -29,7 +25,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
   {
-    path: 'e404',
+    path: 'view/:id',
+    loadChildren: () => import('./page/view/view.module').then( m => m.ViewPageModule)
+  },
+  {
+    path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   }
 ];
