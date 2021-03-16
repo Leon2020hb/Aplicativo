@@ -1,9 +1,27 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>view</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Artigo</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding-horizontal" *ngIf="item | async as art">
+
+  <h3>{{ art.title }}</h3>
+
+  <div class="ion-text-end"><small>Em {{ art.date | date: 'dd/MM/yyyy hh:mm' }}.</small></div>
+
+  <div [innerHTML]="art.text"></div>
+
+  <ion-item-divider></ion-item-divider>
+
+  <p>
+    <ion-button routerLink="/articles" expand="block">
+      Página inicial
+    </ion-button>
+  </p>
 
 </ion-content>
