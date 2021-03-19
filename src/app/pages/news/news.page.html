@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>news</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notícias</ion-title>
+    <img slot="end" class="toplogo" src="assets/Tecnologia.jpg">
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding-horizontal" *ngIf="newsList">
+
+  <div *ngFor="let item of newsList" class="newsItem">
+
+    <ion-card class="ion-no-margin ion-margin-vertical" (click)="newOpen(item.url)">
+      <img src="{{ item.urlToImage }}" alt="{{ item.title }}">
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.source.name }}</ion-card-subtitle>
+        <ion-card-title>{{ item.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ item.description }}</ion-card-content>
+    </ion-card>
+
+  </div>
 
 </ion-content>

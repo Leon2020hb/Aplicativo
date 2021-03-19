@@ -5,6 +5,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Faça Contato</ion-title>
+    <img slot="end" class="toplogo" src="assets/Tecnologia.jpg">
   </ion-toolbar>
 </ion-header>
 
@@ -26,7 +27,7 @@
 
           <!-- Exibe feedback para o nome -->
           <ion-text color="danger" *ngIf="contactForm.controls.name.errors">
-            <small *ngIf="contactForm.controls.name.errors.required">* Obrigatório</small>
+            <small *ngIf="contactForm.controls.name.errors.required">* Campo Obrigatório</small>
             <small *ngIf="contactForm.controls.name.errors.minlength">* Inválido</small>
           </ion-text>
 
@@ -40,8 +41,8 @@
 
           <!-- Exibe feedback para o e-mail -->
           <ion-text color="danger" *ngIf="contactForm.controls.email.errors">
-            <small *ngIf="contactForm.controls.email.errors.required">* ObrigatÃ³rio</small>
-            <small *ngIf="contactForm.controls.email.errors.email">* InvÃ¡lido</small>
+            <small *ngIf="contactForm.controls.email.errors.required">* Campo Obrigatório</small>
+            <small *ngIf="contactForm.controls.email.errors.email">* Inválido</small>
           </ion-text>
 
         </ion-label>
@@ -54,8 +55,8 @@
 
           <!-- Exibe feedback para o assunto -->
           <ion-text color="danger" *ngIf="contactForm.controls.subject.errors">
-            <small *ngIf="contactForm.controls.subject.errors.required">* ObrigatÃ³rio</small>
-            <small *ngIf="contactForm.controls.subject.errors.minlength">* InvÃ¡lido</small>
+            <small *ngIf="contactForm.controls.subject.errors.required">* Campo Obrigatório</small>
+            <small *ngIf="contactForm.controls.subject.errors.minlength">* Inválido</small>
           </ion-text>
 
         </ion-label>
@@ -68,8 +69,8 @@
 
           <!-- Exibe feedback para o Mensagem -->
           <ion-text color="danger" *ngIf="contactForm.controls.message.errors">
-            <small *ngIf="contactForm.controls.message.errors.required">* ObrigatÃ³rio</small>
-            <small *ngIf="contactForm.controls.message.errors.minlength">* InvÃ¡lido</small>
+            <small *ngIf="contactForm.controls.message.errors.required">* Campo Obrigatório</small>
+            <small *ngIf="contactForm.controls.message.errors.minlength">* Inválido</small>
           </ion-text>
 
         </ion-label>
